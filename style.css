@@ -1,0 +1,185 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+#body_bk{
+    /*background-color: rgb(218, 218, 218);*/
+    background-image: url("wepbk.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+
+}
+nav{
+    position:fixed;
+    width: 100%;
+    height: 10vh;
+    border-radius: 10px;
+    /*background-color: rgb(151, 151, 151);*/
+    background-color: black;
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+}
+nav h1{
+    color: white;
+    padding: 10px 5px;
+    animation-name:  roll-in-left;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+
+}
+nav h1 span{
+    color: rgb(77, 209, 37);
+}
+.cont{
+    
+   position: absolute;
+   right: 10%;
+   top: 0;
+   /*width: 50%;
+   height: 100%;
+   background-color: black;*/
+
+
+}
+
+.cont ol li{
+    
+    list-style: none;
+    display: inline-block;
+    padding: 20px 20px;
+}
+.cont ol li a{
+    text-decoration: none;
+    font-size: 1.5em;
+    color: #ffffff;
+    text-transform: capitalize;
+    
+
+}
+.cont ol li:hover{
+    border-bottom: 5px solid black;
+    animation-name: rotate-in-center;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+}
+.cont ol li a:hover{
+    color:yellow;
+    
+   
+}
+.main_1{
+    position: relative;
+    width:80vw;
+    height: 80vh;
+    /*background: red;*/
+    top:15vh;
+    left: 5vw;
+   border-radius: 20px;
+}
+.mnn{
+    position: relative;
+    width: 1500px;
+    overflow: hidden;
+}
+.my_card{
+    width: 600px;
+    height: 300px;
+    position: absolute;
+    top: 150px;
+    left: 400px;
+    text-align: center;
+    background-color: none;
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #979797;
+    /*background-clip: border-box;*/
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+    box-shadow:0 0 80px black;
+}
+.mine{
+    top: 500px;
+
+}
+.mian_2{
+    position: relative;
+    top: 530px;
+    /*text-align: center;*/
+}
+.title_mian_2{
+    color: white;
+    background: rgb(58, 58, 58);
+    padding-top: 8px;
+    width: 100%;
+    height: 60px;
+    text-align: center;
+}
+.title_mian_2 h1{
+    font-style: italic;
+    text-shadow: rgb(138, 136, 136);
+}
+#flipcardcontener{
+    width: 20%;
+    position: relative;
+    height: 350px;
+   /* background-color: white;*/
+    float: left;
+    margin-top: 3%;
+    margin:0 2%;
+    /*box-shadow: 0 0 10px rgb(158, 158, 158);*/
+    perspective: 1000px;
+    
+}
+#flipcardcontener:hover #flipcard{
+    transform: rotateY(180deg);
+}
+#flipcard{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    
+}
+#flipcardfront ,#flipcardback{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    
+}
+#flipcardfront{
+    /*background-image: url(imgfilm.jpg);*/
+    background-size: cover;background-repeat: no-repeat;
+    color: white;
+    
+}
+#flipcardback{
+   /* background-image: url(imgfilm.jpg);*/
+    color: white;
+    transform: rotateY(180deg);
+    
+    
+}
+#imgfilmall{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    
+}
+
+
+@-webkit-keyframes roll-in-left{0%{-webkit-transform:translateX(-800px) rotate(-540deg);transform:translateX(-800px) rotate(-540deg);opacity:0}100%{-webkit-transform:translateX(0) rotate(0deg);transform:translateX(0) rotate(0deg);opacity:1}}@keyframes roll-in-left{0%{-webkit-transform:translateX(-800px) rotate(-540deg);transform:translateX(-800px) rotate(-540deg);opacity:0}100%{-webkit-transform:translateX(0) rotate(0deg);transform:translateX(0) rotate(0deg);opacity:1}}
+@-webkit-keyframes kenburns-bottom{0%{-webkit-transform:scale(1) translateY(0);transform:scale(1) translateY(0);-webkit-transform-origin:50% 84%;transform-origin:50% 84%}100%{-webkit-transform:scale(1.25) translateY(15px);transform:scale(1.25) translateY(15px);-webkit-transform-origin:bottom;transform-origin:bottom}}@keyframes kenburns-bottom{0%{-webkit-transform:scale(1) translateY(0);transform:scale(1) translateY(0);-webkit-transform-origin:50% 84%;transform-origin:50% 84%}100%{-webkit-transform:scale(1.25) translateY(15px);transform:scale(1.25) translateY(15px);-webkit-transform-origin:bottom;transform-origin:bottom}}
+@-webkit-keyframes rotate-in-center{0%{-webkit-transform:rotate(-360deg);transform:rotate(-360deg);opacity:0}100%{-webkit-transform:rotate(0);transform:rotate(0);opacity:1}}@keyframes rotate-in-center{0%{-webkit-transform:rotate(-360deg);transform:rotate(-360deg);opacity:0}100%{-webkit-transform:rotate(0);transform:rotate(0);opacity:1}}
